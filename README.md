@@ -97,3 +97,104 @@ public int count() {
 </select>
 ~~~
 
+관리자 게시판 관리 페이지
+
+- 게시판을 추가 및 수정, 삭제 기능
+~~~
+package controller.admin.boardConfig;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import models.admin.board.BoardConfigDao;
+import models.admin.board.BoardConfigDto;
+import models.admin.board.BoardConfigRegisterService;
+
+import static jmsUtil.Utils.*;
+
+@WebServlet("/admin/board")
+public class BoardConfigController extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		List<BoardConfigDto> list = BoardConfigDao.getInstance().gets();
+		
+		req.setAttribute("list", list);
+		
+		req.setAttribute("addCss", new String[] {"admin/list", "admin/admin"});
+		req.setAttribute("addJs", new String[] {"admin/list"});
+		
+		RequestDispatcher rd = req.getRequestDispatcher("/admin/board/board.jsp");
+		rd.forward(req, resp);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setCharacterEncoding("utf-8");
+		req.setCharacterEncoding("utf-8");
+		try {
+			BoardConfigRegisterService service = new BoardConfigRegisterService();
+			service.register(req);
+			
+			reloadPage(resp, "parent");
+		} catch(RuntimeException e) {
+			e.printStackTrace();
+			showAlertException(resp, e);
+		}
+		
+	}
+
+}
+~~~
+ - 수정 및 
+~~~
+package controller.admin.boardConfig;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import models.admin.board.BoardConfigDeleteService;
+import models.admin.board.BoardConfigUpdateService;
+
+import static jmsUtil.Utils.*;
+
+@WebServlet("/admin/boards")
+public class BoardController extends HttpServlet{
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		try {
+			String mode = req.getParameter("mode");
+			if(mode.equals("update")) {
+				BoardConfigUpdateService service = new BoardConfigUpdateService();
+				service.update(req);
+			} else {
+				BoardConfigDeleteService service = new BoardConfigDeleteService();
+				service.delete(req);
+			}
+			
+			reloadPage(resp, "parent");
+		} catch (RuntimeException e) {
+			e.printStackTrace();
+			showAlertException(resp, e);
+		}
+		
+	}
+
+}
+
+~~~
