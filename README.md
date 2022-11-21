@@ -77,6 +77,10 @@ public int count() {
 		
 		return count;
 	}
+<!-- QnA 답변 미등록 개수 -->
+	<select id="reqCount" resultType="int">
+		SELECT COUNT(*) FROM QAndA WHERE isAnswer=0;
+	</select>
 ~~~
 ~~~
 public int count() {
@@ -87,5 +91,9 @@ public int count() {
 		
 		return count;
 	}
+<!-- 미승인 상품 총 개수 -->
+<select id="reqCount" resultType="int">
+	SELECT COUNT(*) FROM RequestProduct WHERE status="req";
+</select>
 ~~~
 
