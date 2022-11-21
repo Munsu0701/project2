@@ -68,4 +68,24 @@ public class AdminService {
 
 ~~~
 
+- DAO
+~~~
+public int count() {
+		SqlSession sqlSession = Connection.getSession();
+		
+		int count = sqlSession.selectOne("QAndAMapper.reqCount");
+		
+		return count;
+	}
+~~~
+~~~
+public int count() {
+		
+		SqlSession sqlSession = Connection.getSession();
+		
+		int count = sqlSession.selectOne("RequestProductMap.reqCount");
+		
+		return count;
+	}
+~~~
 
