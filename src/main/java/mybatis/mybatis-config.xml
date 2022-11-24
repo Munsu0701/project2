@@ -6,8 +6,8 @@
   <properties>
 	  <property name="hostname" value="localhost" />
       <property name="driver" value="com.mysql.cj.jdbc.Driver" />
-      <property name="url" value="jdbc:mysql://dsm.bmserver.org/WorkOut?characterEncoding=UTF8&amp;serverTimezone=UTC" />
-      <property name="username" value="Dev" />
+      <property name="url" value="jdbc:mysql://localhost:3306/WorkOut?characterEncoding=UTF8&amp;serverTimezone=UTC" />
+      <property name="username" value="root" />
       <property name="password" value="aA!123456" />
   </properties>
   <settings>
