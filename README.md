@@ -667,6 +667,13 @@ public class ProductUpdateService {
 
 <details><summary style="color:skyblue">관련 예시 </summary>
 
-
+- 관리자 유저 관리
+<img src="https://user-images.githubusercontent.com/105355765/210734812-0264e409-ea5e-4016-b6ac-686017aff7a6.png">
+	
+- 관리자 판재자 상품 관리(승인/미승인)
+<img src="https://user-images.githubusercontent.com/105355765/210734871-da71c48d-e969-4ca6-9876-2b504e8473a8.png">
+	
+- 관리자 게시판 설정 
+<img src="https://user-images.githubusercontent.com/105355765/210734919-0e6e8a2a-eb43-41b1-a713-e600d18d2657.png">
 
 </details>
