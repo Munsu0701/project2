@@ -1,6 +1,8 @@
 # WorkoutProject
 
-댓글 쓰기
+댓글 관련 코드
+
+<details><summary style="color:skyblue">댓글 쓰기</summary>
 
 ~~~
 package controller.comment;
@@ -42,7 +44,9 @@ public class CommentController extends HttpServlet{
 }
 
 ~~~
+
 - 기능 구현 
+
 ~~~
 package models.comment;
 
@@ -76,7 +80,10 @@ public class CommentWriteService {
 }
 ~~~
 
-댓글 삭제(관리자 또는 작성자만 삭제 가능)
+</details>
+
+<details><summary style="color:skyblue">댓글 삭제(관리자 또는 작성자만 삭제 가능)</summary>
+
 ~~~
 package controller.comment;
 
@@ -115,7 +122,9 @@ public class CommentDeleteController extends HttpServlet{
 
 }
 ~~~
+
 - 기능 
+
 ~~~
 package models.comment;
 
@@ -136,7 +145,10 @@ public class CommentDeleteService {
 }
 ~~~
 
-댓글 수정
+</details>
+
+<details><summary style="color:skyblue">댓글 수정</summary>
+
 ~~~
 package controller.comment;
 
@@ -171,7 +183,9 @@ public class CommentUpdateController extends HttpServlet{
 	
 }
 ~~~
+
 - 기능 
+
 ~~~
 package models.comment;
 
@@ -196,3 +210,12 @@ public class CommentUpdateService {
 
 }
 ~~~
+
+</details>
+
+<details><summary style="color:skyblue">관련 예시 이미지</summary>
+
+- 댓글 작성 및 구현
+<img src="https://user-images.githubusercontent.com/105355765/210735982-e572443d-3f0e-443b-96b1-b7043cdf4aa8.png">
+
+</details>
