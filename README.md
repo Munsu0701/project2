@@ -1,6 +1,8 @@
 # WorkoutProject
 
-QnA 고객센터 구현(페이지 네이션 구현)
+QnA 고객센터 구현
+
+<details><summary style="color:skyblue">QnA 고객센터 메인(페이지 네이션 구현)</summary>
 
 ~~~
 package controller.qAnda;
@@ -40,7 +42,9 @@ public class QAndAController extends HttpServlet{
 	
 }
 ~~~
+
 - 기능 
+
 ~~~
 package models.qAnda;
 
@@ -71,7 +75,10 @@ public class QAndAListService {
 }
 ~~~
 
-QnA 고객센터 삭제(문의글 삭제)
+</details>
+
+<details><summary style="color:skyblue">QnA 고객센터 삭제(문의글 삭제)</summary>
+
 ~~~
 package controller.qAnda;
 
@@ -114,6 +121,7 @@ public class QAndADeleteController extends HttpServlet{
 ~~~
 
 - 기능
+
 ~~~
 package models.qAnda;
 
@@ -148,7 +156,9 @@ public class QAndADeleteService {
 }
 ~~~
 
-QnA 문의글 보기 및 답변(작성자 또는 관리자만 확인 가능)
+</details>
+
+<details><summary style="color:skyblue">QnA 문의글 보기 및 답변(작성자 또는 관리자만 확인 가능)</summary>
 
 ~~~
 package controller.qAnda;
@@ -210,6 +220,7 @@ public class QAndAViewController extends HttpServlet{
 ~~~
 
 - 문의글 보기 기능
+
 ~~~
 package models.qAnda;
 
@@ -245,6 +256,7 @@ public class QAndAAdminViewService {
 ~~~
 
 - 문의글 답변 기능
+
 ~~~
 package models.qAnda;
 
@@ -276,7 +288,10 @@ public class QAndAViewService {
 }
 ~~~
 
-문의글 작성
+</details>
+
+<details><summary style="color:skyblue">문의글 작성</summary>
+
 ~~~
 package controller.qAnda;
 
@@ -337,6 +352,7 @@ public class QAndAWritercontroller extends HttpServlet{
 ~~~
 
 - 기능
+
 ~~~
 package models.qAnda;
 
@@ -386,3 +402,22 @@ public class QAndAWriteService {
 
 }
 ~~~
+
+</details>
+
+<details><summary style="color:skyblue">관련 예시 이미지</summary>
+
+- Q&A 문의 글 작성
+<img src="https://user-images.githubusercontent.com/105355765/210737143-fbb71804-d4d5-4ddb-a2bb-35b90ab6b81b.png">
+
+- Q&A 글 목록(답변 및 미답변 상태 확인)
+미답변
+<img src="https://user-images.githubusercontent.com/105355765/210737345-38cae0d7-3bca-45da-a5a0-70488d21a3d8.png">
+
+답변완료
+<img src="https://user-images.githubusercontent.com/105355765/210737396-0e4ce063-933f-493e-98de-6d74b8a18f48.png">
+
+- Q&A 문의 글 답변 후 문의글 
+<img src="https://user-images.githubusercontent.com/105355765/210737504-f7c2f1d9-523e-4f16-bbf7-ebcb74e3e28f.png">
+
+</details>
