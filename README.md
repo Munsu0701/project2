@@ -2,7 +2,8 @@
 
 관리자 페이지 구현
 
-- 메인 (현재 판매 신청 상품, Q&A 질문 갯수 확인)
+<details><summary style="color:skyblue">메인 (현재 판매 신청 상품, Q&A 질문 갯수 확인)</summary>
+
 ~~~
 package controller.admin;
 
@@ -42,7 +43,8 @@ public class AdminController extends HttpServlet{
 
 ~~~
 
-- 기능 부분 
+- 기능 부분
+
 ~~~
 package models.admin;
 
@@ -69,6 +71,7 @@ public class AdminService {
 ~~~
 
 - DAO
+
 ~~~
 public int count() {
 		SqlSession sqlSession = Connection.getSession();
@@ -97,9 +100,12 @@ public int count() {
 </select>
 ~~~
 
-관리자 게시판 관리 페이지
+</details>
+
+<details><summary style="color:skyblue">관리자 게시판 관리 페이지</summary>
 
 - 게시판을 추가 및 수정, 삭제 기능
+
 ~~~
 package controller.admin.boardConfig;
 
@@ -154,7 +160,9 @@ public class BoardConfigController extends HttpServlet{
 
 }
 ~~~
+
  - 게시판 수정 및 삭제
+ 
 ~~~
 package controller.admin.boardConfig;
 
@@ -200,6 +208,7 @@ public class BoardController extends HttpServlet{
 ~~~
 
 - 수정 기능
+
 ~~~
 package models.admin.board;
 
@@ -255,6 +264,7 @@ public class BoardConfigUpdateService {
 ~~~
 
 - 삭제 기능
+
 ~~~
 package models.admin.board;
 
@@ -285,9 +295,13 @@ public class BoardConfigDeleteService {
 }
 
 ~~~
-관리자 유저 관리
+
+</details>
+
+<details><summary style="color:skyblue">관리자 유저 관리</summary>
 
 - 유저 목록 및 수정 삭제(검색)
+
 ~~~
 package controller.admin;
 
@@ -350,6 +364,7 @@ public class AdminMemberController extends HttpServlet{
 ~~~
 
 - 기능 
+
 ~~~
 package models.admin;
 
@@ -463,7 +478,9 @@ public class UserManageService {
 }
 ~~~
 
-판매자 판매 상품 관리자에게 승인 요청한 상품 목록(검색)
+</details>
+
+<details><summary style="color:skyblue">판매자 판매 상품 관리자에게 승인 요청한 상품 목록(검색)</summary>
 
 ~~~
 package controller.admin;
@@ -505,6 +522,7 @@ public class AdminProductController extends HttpServlet {
 ~~~
 
 - 검색 기능
+
 ~~~
 package models.admin;
 
@@ -553,7 +571,9 @@ public class ProductSearchService {
 }
 ~~~
 
-- 판매자 상품 승인/미승인 처리
+</details>
+
+<details><summary style="color:skyblue">판매자 상품 승인/미승인 처리</summary>
 
 ~~~
 package controller.admin;
@@ -594,6 +614,7 @@ public class ProductUpdateController extends HttpServlet{
 ~~~
 
 - 기능 
+
 ~~~
 package models.admin;
 
@@ -640,3 +661,12 @@ public class ProductUpdateService {
 	
 }
 ~~~
+
+
+</details>
+
+<details><summary style="color:skyblue">관련 예시 </summary>
+
+
+
+</details>
